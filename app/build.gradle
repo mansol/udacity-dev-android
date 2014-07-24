@@ -1,0 +1,40 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'com.android.tools.build:gradle:0.11.+'
+	}
+}
+apply plugin: 'android'
+
+repositories {
+	mavenCentral()
+}
+
+android {
+	compileSdkVersion 'android-L'
+	buildToolsVersion "20.0.0"
+
+	defaultConfig {
+		applicationId "com.stilva.android.sunshineapp.app"
+		minSdkVersion 10
+		targetSdkVersion 20
+		versionCode 1
+		versionName "1.0"
+	}
+	buildTypes {
+		release {
+			runProguard false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+}
+
+dependencies {
+	compile fileTree(dir: 'libs', include: ['*.jar'])
+	// You must install or update the Support Repository through the SDK manager to use this dependency.
+	// You must install or update the Support Repository through the SDK manager to use this dependency.
+	compile 'com.android.support:support-v4:20.0.0'
+	compile 'com.android.support:appcompat-v7:19.+'
+}
