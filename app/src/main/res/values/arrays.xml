@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <array name="units">
+    <item>metric</item>
+    <item>imperial</item>
+  </array>
+  <array name="unitValues">
+    <item>metric</item>
+    <item>imperial</item>
+  </array>
+</resources>
