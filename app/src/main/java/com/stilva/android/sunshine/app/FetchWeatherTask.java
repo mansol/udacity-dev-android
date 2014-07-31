@@ -18,11 +18,11 @@ import java.util.Date;
 
 public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
 
-	private IFragmentSync mIFragmentSync;
+	private ForecastFragment mForecastFragment;
 	private final String LOG_TAG = FetchWeatherTask.class.getSimpleName();
 
-	public FetchWeatherTask(IFragmentSync fragmentSync) {
-		mIFragmentSync = fragmentSync;
+	public FetchWeatherTask(ForecastFragment fragmentSync) {
+		mForecastFragment = fragmentSync;
 	}
 
 	@Override
@@ -111,7 +111,7 @@ public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
 
 	@Override
 	protected void onPostExecute(String[] strings) {
-		mIFragmentSync.update(strings);
+		mForecastFragment.update(strings);
 	}
 
 	/* The date/time conversion code is going to be moved outside the asynctask later,

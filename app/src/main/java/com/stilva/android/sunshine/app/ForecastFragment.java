@@ -15,12 +15,11 @@ import java.util.ArrayList;
 /**
  * A fragment containing a simple view.
  */
-public class ForecastFragment extends Fragment implements IFragmentSync {
+public class ForecastFragment extends Fragment {
 
 	private ArrayAdapter<String> mForecastAdapter;
 	private PreferenceDataObject mPreferenceObject;
 
-	@Override
 	public void update(String[] strings) {
 		mForecastAdapter.clear();
 		// so notifyDataSetChanged() doesn't get called too often
